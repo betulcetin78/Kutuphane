@@ -44,7 +44,7 @@ namespace KutuphaneProjesi.Controllers
         }
 
         // GET: Books/Create
-        public IActionResult Create()
+        public IActionResult Add()
         {
             return View();
         }
@@ -54,7 +54,7 @@ namespace KutuphaneProjesi.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,Price,Stock")] Book book)
+        public async Task<IActionResult> Add([Bind("Id,Title,Author,Price,Stock")] Book book)
         {
             if (ModelState.IsValid)
             {
